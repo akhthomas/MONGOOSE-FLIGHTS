@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap');
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px; 
+  font-family: 'Libre Bodoni', serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #990000;
+}
+
+.nav {
+  background-color: #000;
+  top: 0;
+  height: 20px;
+  width: 100%;
+  padding:25px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.nav a {
+  font-size: 10px; 
+  text-transform: uppercase;
+  font-family: 'Libre Bodoni', serif;
+  color: #fff;
+  margin: 35px;
+  text-decoration: none;
 }
