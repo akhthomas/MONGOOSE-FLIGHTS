@@ -11,24 +11,31 @@
 <h2>Add A Flight</h2>
 <form action="/flights" method="POST">
   <label>Airlines:
-     <input type="text" name="airline">
+    <input type="text" name="airline">
   </label><br><br>
 
   <label>Flight No.
     <input type="text" name="flightNo">
- </label><br><br>
+</label><br><br>
 
- <label>Airports:
-     <select name="airport">
-          <option value="AUS">AUS</option>
-          <option value="DFW">DFW</option>
-          <option value="DEN">DEN</option>
-          <option value="LAX">LAX</option>
-          <option value="SAN">SAN</option>
-     </select>
-    </label>
+<label>
+  Departs:
+  <input type="date" name="departs">
+</label><br><br>
+
+<label>Airports:
+  <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+  </select>
+  </label>
+  <br><br>
+
     <br>
-  <input type="submit" value="Add Flight">
+  <input type="submit" value="+ADD">
 
 
 </body>

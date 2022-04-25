@@ -11,28 +11,27 @@ const flightSchema = new Schema({
       type: String, 
       enum: ['American', 'Southwest', 'United'],
       required: true 
-     },
+    },
 
     airport: { 
       type: String, 
       enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
       default: 'DEN', 
       required: true 
-     },
+    },
 
-     flightNo: { 
-       type: Number,
-       min: 10,
-       max: 9999,
-       required: true,
-     },
-       
-     departs: {
-       type: Date,
-       default: function() {
-         return new Date().getFullYear();
-       }
-     }
+    flightNo: { 
+      type: Number,
+      min: 10,
+      max: 9999,
+      required: true,
+    },
+    departs: {
+      type: Date,
+      default: function() {
+      return new Date().getFullYear();
+      }
+    }
 });
 
 // compiling the schema into a model and then exporting
