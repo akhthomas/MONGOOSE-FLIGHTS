@@ -10,7 +10,7 @@
 
 <h2>Add A Flight</h2>
 <form action="/flights" method="POST">
-  <label>Airlines:
+  <label>Airline:
     <input type="text" name="airline">
   </label><br><br>
 
@@ -20,10 +20,10 @@
 
 <label>
   Departs:
-  <input type="date" name="departs">
+  <input type="date" min="2023-01-01" name="departs">
 </label><br><br>
 
-<label>Airports:
+<label>Airport:
   <select name="airport">
         <option value="AUS">AUS</option>
         <option value="DFW">DFW</option>
