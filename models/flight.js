@@ -5,14 +5,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const destinationSchema = new Schema({
+const detailsSchema = new Schema({
   airport: {
     type: String,
     enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
   },
   arrival: {
     type: Date
-  },
+  }
 })
 
 // https://mongoosejs.com/docs/validation.html
@@ -43,9 +43,9 @@ const flightSchema = new Schema({
       const addYear = date.getFullYear()+1
       return date.setFullYear(addYear);
     },
-    destinations: {
+    details: {
       type: String,
-      destinations: [destinationSchema]
+      details: [detailsSchema]
     }
       }
     })
@@ -53,4 +53,4 @@ const flightSchema = new Schema({
 // compiling the schema into a model and then exporting
 // it 
 module.exports = mongoose.model('Flight', flightSchema);
-module.exports = mongoose.model('Destination', destinationSchema);
+module.exports = mongoose.model('Details', detailsSchema);

@@ -9,6 +9,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
+var detailsRouter = require('./routes/details');
 
 var server = express();
 
@@ -24,6 +25,7 @@ server.use(express.static(path.join(__dirname, 'public')));
 
 server.use('/', indexRouter);
 server.use('/flights', flightsRouter);
+server.use('/', detailsRouter);
 
 // catch 404 and forward to error handler
 server.use(function(req, res, next) {
