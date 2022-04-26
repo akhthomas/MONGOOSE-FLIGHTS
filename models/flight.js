@@ -11,7 +11,7 @@ const detailsSchema = new Schema({
     enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
   },
   arrival: {
-    type: Date
+    type: Date,
   }
 })
 
@@ -42,13 +42,13 @@ const flightSchema = new Schema({
       const date = new Date();
       const addYear = date.getFullYear()+1
       return date.setFullYear(addYear);
-    },
+    }, 
     details: {
       type: String,
-      details: [detailsSchema]
+      detail: [detailsSchema]
     }
-      }
-    })
+  }
+})
 
 // compiling the schema into a model and then exporting
 // it 
