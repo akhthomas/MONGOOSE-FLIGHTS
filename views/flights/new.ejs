@@ -11,7 +11,11 @@
 <h2>Add A Flight</h2>
 <form action="/flights" method="POST">
   <label>Airline:
-    <input type="text" name="airline">
+    <select name="airline">
+      <option value="Southwest">Southwest</option>
+      <option value="American">American</option>
+      <option value="United">United</option>
+</select>
   </label><br><br>
 
   <label>Flight No.
@@ -20,7 +24,7 @@
 
 <label>
   Departs:
-  <input type="date" min="2023-01-01" name="departs">
+  <input type="datetime-local" name="departs" value= <%= departDate %>>
 </label><br><br>
 
 <label>Airport:

@@ -12,7 +12,10 @@ const flight = require('../models/flight');
 const Flight = require('../models/flight');
 
 function newFlight(req, res){
-    res.render('flights/new');
+    const newFlight = new Flight();
+    const dt = newFlight.departs;
+    let departDate = dt.toISOString().slice(0, 16);
+    res.render('flights/new', {departDate});
 }
 function index(req, res){
     Flight.find({}, function (err, flights){
@@ -24,9 +27,7 @@ function index(req, res){
 function create(req, res){
     // trim any whitespace at start/end 
     //of airlline input 
-    req.body.airline = req.body.airline.trim();
-    // split airline into any array using regex
-    if (req.body.airline) req.body.airline.split(/\s*,\s*/);
+    console.log(new Date());
     const flight = new Flight(req.body);
     
     flight.save(function(err) {
